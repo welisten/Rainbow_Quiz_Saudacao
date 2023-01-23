@@ -1,0 +1,258 @@
+*{
+  margin: 0;
+  padding: 0;  
+  box-sizing: border-box;
+}
+
+body
+{
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+.container
+{
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.saudacao
+{   
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.background-boxs
+{   
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
+    box-shadow: 0 5px 5px rgb(0, 0, 0, 0.);
+}
+
+.logo.container
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    transform: translate(-50%, -50%);
+}
+
+.logo
+{
+    
+    width: 360px;
+    cursor: pointer;
+    height: 240px;
+    z-index: 10;
+    animation: bringLogo 3s ease-out;
+}
+
+
+.logo::before,
+.logo::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    width: 150%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.logo.animate::before
+{
+    top: 0;
+    background-image:   radial-gradient(circle,#ff5643 20%, transparent 20%),
+                        radial-gradient(circle, transparent 20%, #fff51b 20%, transparent 30%),
+                        radial-gradient(circle,		#48ffb0 20%, transparent 20%),
+                        radial-gradient(circle,	#34adfd 20%, transparent 20%),
+                        radial-gradient(circle, transparent 20%, #34adfd 20%, transparent 30%),
+                        radial-gradient(circle,#ff5643 20%, transparent 20%),
+                        radial-gradient(circle,#fff51b 20%, transparent 20%),
+                        radial-gradient(circle, transparent 20%, #48ffb0 20%, transparent 30%),
+                        radial-gradient(circle,#34adfd 20%, transparent 20%),
+                        radial-gradient(circle,#e19aec 20%, transparent 20%),
+                        radial-gradient(circle, transparent 10%, #ff5643    15%, transparent 20%),
+                        radial-gradient(circle,#fff51b 20%, transparent 20%);
+                        
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 20% 20%, 10% 10%, 15% 15%, 18% 18%, 20% 20%;
+    background-position: 40% 90%, 40% 90%, 40% 90%, 45% 90%, 50% 90%, 50% 90%, 55% 90%, 55% 90%, 60% 90%, 60% 90%, 70% 90%, 70% 90%; 
+    animation: topBubbles 1s ease-in-out forwards;
+
+}
+
+.logo.animate::after
+{
+
+    top: 100%;
+    background-image:   radial-gradient(circle,#34adfd 20%, transparent 20%),
+                        radial-gradient(circle, transparent 20%, #48ffb0 20%, transparent 30%),
+                        radial-gradient(circle,		#fff51b 20%, transparent 20%),
+                        radial-gradient(circle,	#ff5643 20%, transparent 20%),
+                        radial-gradient(circle, transparent 20%, #e19aec 20%, transparent 30%),
+                        radial-gradient(circle,#34adfd 20%, transparent 20%),
+                        radial-gradient(circle,#48ffb0 20%, transparent 20%),
+                        radial-gradient(circle, transparent 20%, #fff51b 20%, transparent 30%),
+                        radial-gradient(circle,#ff5643 20%, transparent 20%),
+                        radial-gradient(circle,#e19aec 20%, transparent 20%),
+                        radial-gradient(circle, transparent 10%, #fff51b    15%, transparent 20%),
+                        radial-gradient(circle,#48ffb0 20%, transparent 20%);
+   
+                        background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 20% 20%, 10% 10%, 20% 20%, 10% 10%, 15% 15%;;
+                        background-position: 40% 10%, 40% 10%, 40% 10%, 45% 10%, 50% 10%, 50% 10%, 55% 10%, 55% 10%, 60% 10%, 60% 10%, 70% 10%, 70% 10%; 
+                        animation: bottomBubbles 1s ease-in-out forwards;
+}
+
+.--1, .--2, .--3, .--4, .--5
+{
+    animation: animate-bg-down 2s ease-in-out;
+}
+
+.--6, .--7, .--8, .--9, .--10
+{
+    animation: animate-bg-up 2s ease-in-out;
+}
+
+
+.background-boxs.--1
+{
+    background-color:rgba(96,102,208);
+    top: 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.background-boxs.--2
+{
+    /*opacidade 70%*/
+    background-color:rgb(144,148,222);
+    top: 10%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.background-boxs.--3
+{
+    /* opacidade 50% */
+    background-color:rgb(170,173,226);
+    top: 20%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.background-boxs.--4
+{   
+    /* opacidade 15%*/
+    background-color:rgb(221,222,238);
+    top: 30%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3),
+                inset 0 -2px 10px rgba(0, 0, 0, 0.3);     
+}
+
+.background-boxs.--5
+{
+    /* opacidade 5%*/
+    background-color:rgb(255, 255, 255);
+    top: 40%;
+
+}
+
+.background-boxs.--6
+{
+    /* opacidade 5%*/
+    background-color:rgb(255, 255, 255);
+    top: 50%;
+
+}
+
+.background-boxs.--7
+{
+    /* opacidade 15%*/
+    background-color:rgb(221,222,238);
+    top: 60%;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+.background-boxs.--8
+{
+    /* opacidade 50%*/
+    background-color:rgb(170,173,226);
+    top: 70%;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+.background-boxs.--9
+{
+    /* opacidade 70%*/
+    background-color:rgb(144,148,222);
+    top: 80%;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+.background-boxs.--10
+{
+    background-color:rgba(96,102,208);
+    top: 90%;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+
+@keyframes animate-bg-down{
+  from{
+    top: 0px;
+    background-color: #f3f3f3;
+  }
+
+}
+
+@keyframes animate-bg-up{
+    from{
+      top: 90%;
+      background-color: #f3f3f3;
+    }     
+  }
+
+@keyframes bringLogo {
+    from{
+        width: 0;
+        height: 0;
+    }
+    
+}
+
+@keyframes topBubbles
+{
+    50%{
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 95% 20%, 90% 100%,  50% 10%, 70% 10%, 90% 100%;
+    }
+
+    100%{
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 95% 10%, 90% 90%,  50% 0%, 70% 0%, 90% 90%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+  
+@keyframes bottomBubbles
+{
+    50%{
+        background-position: 0% 0%, 10% 40%, 20% 35%, 25% 50%, 30% 60%, 60% 80%, 40% 60%, 50% 90%, 100% 20%, 90% 55%, 80% 35%, 100% 0%; 
+    }
+    
+    100%{
+        background-position: 0% 10%, 10% 50%, 20% 45%, 25% 60%, 30% 70%, 60% 90%, 40% 70%, 50% 100%, 100% 30%, 90% 65%, 80% 45%, 100% 10%; 
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+
+    }
+}
